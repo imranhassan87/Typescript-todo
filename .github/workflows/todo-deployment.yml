@@ -29,10 +29,9 @@ jobs:
         node-version: 12
 
     # Runs a set of commands using the runners shell
-    - name: integrating yarn
-      uses: borales/actions-yarn@2.0.0
+    - uses: borales/actions-yarn@v2.0.0
       with:
-        cmd: install
+        cmd: install # will run `yarn install` command
     - name: build
       run: yarn build
     - name: installing surge
