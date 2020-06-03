@@ -23,14 +23,14 @@ jobs:
     - uses: actions/checkout@v2
 
     # Runs a single command using the runners shell
-      name: installing node
-    - uses: actions/setup-node@v2-beta
+    - name: installing node
+      uses: actions/setup-node@v2-beta
       with:
         node-version: 12
 
     # Runs a set of commands using the runners shell
-      name: integrating yarn
-    - uses: borales/actions-yarn@2.0.0
+    - name: integrating yarn
+      uses: borales/actions-yarn@2.0.0
       with:
         cmd: install
     - name: build
