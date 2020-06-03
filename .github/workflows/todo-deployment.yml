@@ -35,6 +35,6 @@ jobs:
     - name: build
       run: yarn build
     - name: installing surge
-      run: yarn add surge globally
+      run: yarn global add surge
     - name: deploying with surge
       run: surge ./build typescript-todo.surge.sh --token ${{secrets.SURGE_TOKEN}}
